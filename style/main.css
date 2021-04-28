@@ -45,7 +45,7 @@ table td {
 .soSad {
   height: 125px;
   width: 125px;
-  background-image: url("/img/sadB.png");
+  background-image: url("../img/sadB.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -535,7 +535,7 @@ html body {
   padding: 0;
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
-  background-image: url("/img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-position: center;
   background-repeat: repeat;
   background-attachment: fixed;
