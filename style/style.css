@@ -169,31 +169,4 @@
 .card p {
   font-size: large;
   margin: 0;
-}
-
-#fiche-produit {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-@media only screen and (max-width: 767px) {
-  #fiche-produit {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-#fiche-produit__image {
-  height: 250px;
-  width: 250px;
-  margin: 2rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #9DBAD5;
-  transition-delay: 1s;
-}
-#fiche-produit__prix {
-  font-size: x-large;
-  margin-top: 0;
 }/*# sourceMappingURL=style.css.map */
