@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Template pour début de projet rapide -->
+<html lang="fr">
+    <head> 
+            <!-- Titre -->
+            <title>Template</title>
+            <!-- Meta standarts -->
+            <meta charset="UTF-8">
+            <meta name="author" content="Julien Meunier">
+            <meta name="description" content="Template pour débuter un porjet web">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+            <!-- Intégration facebook -->
+            <meta property="og:image" content="ImageReprésentative.png">
+            <meta property="og:description" content="description de la page">
+            <meta property="og:title" content="Titre de l'encart">
+            <!-- Intégration twitter -->
+            <meta name="twitter:title" content="description de la page">
+            
+            <!-- links -->
+            <link rel="stylesheet" href="style/main.css" type="text/css" media="all">    
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+            <link rel="icon" href="favicon.png" />
+    </head>
+
+
+    <body class="overflow-hidden">
+        <div id="add-confirm">
+            <div id="add-confirm__message"><p>Ajouté au panier !</p></div>
+        </div>
+        <header>
+            <nav class="nav-fixed">
+                <a href="index.html" class="marque-et-logo">
+                    <div class="marque-et-logo__logo">
+                        <img src="img/logo.png" alt="logo Orinoco" >
+                    </div>  
+                    <p class="marque-et-logo__marque handwritten">Orinoco</p>
+                </a>
+                <a href="panier.html" id="panier-btn">
+                    <p id="panier-btn-content">Panier</p>
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <div id="hero"><h1 id="titre" class="slide-top">En savoir plus sur </h1></div>
+            <div id="magasin">
+                <article id="fiche-produit">
+                    <img id="fiche-produit__image" class="slide-left" src="" alt="">
+                    <div class="fade-in">
+                        <div class="fiche-produit-header">
+                            <h2 id="fiche-produit__nom"></h2>
+                            <p id="fiche-produit__prix"></p>
+                        </div>
+                        <div id="colors-section"></div>
+                        
+                        <p id="fiche-produit__description"></p>
+                        
+                    </div>
+                </article>
+                <div class="orderBox fade-in">
+                    <div id="selectQuantity">
+                        <div id="selectQuantity__minus"><i class="fas fa-minus"></i></div>
+                        <div id="selectQuantity__quantity">0</div>
+                        <div id="selectQuantity__plus"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div>
+                        <button onclick="ajouterAuPanier()" id="order" >Adopter</button>
+                    </div>
+                    
+                </div>
+                     
+            </div>   
+        </main>
+
+        <script src="https://kit.fontawesome.com/f73e292c68.js" crossorigin="anonymous"></script>
+        <script src="script/script.js"></script>
+        <script src="script/script__product.js"></script>
+    </body>
+</html>

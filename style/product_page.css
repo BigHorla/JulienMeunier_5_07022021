@@ -1,0 +1,106 @@
+#fiche-produit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  #fiche-produit {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+#fiche-produit__image {
+  height: 250px;
+  width: 250px;
+  margin: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #9DBAD5;
+  transition-delay: 1s;
+}
+#fiche-produit__prix {
+  font-size: x-large;
+  margin-top: 0;
+}
+
+#colors-section {
+  display: flex;
+}
+@media only screen and (max-width: 767px) {
+  #colors-section {
+    justify-content: center;
+  }
+}
+#colors-section .colorViewer {
+  margin-right: 2rem;
+  height: 50px;
+  width: 50px;
+  border: 3px solid white;
+  border-radius: 50%;
+  transition-duration: 1.5s;
+}
+#colors-section .colorViewer:hover {
+  transform: scale(1.2);
+}
+
+.orderBox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 90%;
+}
+
+#selectQuantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-direction: row;
+  transition-duration: 1s;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  border: 1px solid #66C3CA;
+  border-radius: 2rem 0 2rem 0;
+}
+#selectQuantity__minus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  height: 50px;
+  width: 50px;
+  border-radius: 2rem 0 0 0;
+  background-color: #FFEBD0;
+}
+#selectQuantity__minus:hover {
+  background-color: #9DBAD5;
+}
+#selectQuantity__quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  height: 50px;
+  width: 100px;
+  background-color: #FFEBD0;
+}
+#selectQuantity__plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  height: 50px;
+  width: 50px;
+  border-radius: 0 0 2rem 0;
+  background-color: #FFEBD0;
+}
+#selectQuantity__plus:hover {
+  background-color: #9DBAD5;
+}/*# sourceMappingURL=product_page.css.map */

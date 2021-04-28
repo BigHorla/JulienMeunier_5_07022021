@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- Template pour début de projet rapide -->
+<html lang="fr">
+    <head> 
+            <!-- Titre -->
+            <title>Template</title>
+            <!-- Meta standarts -->
+            <meta charset="UTF-8">
+            <meta name="author" content="Julien Meunier">
+            <meta name="description" content="Template pour débuter un porjet web">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+            <!-- Intégration facebook -->
+            <meta property="og:image" content="ImageReprésentative.png">
+            <meta property="og:description" content="description de la page">
+            <meta property="og:title" content="Titre de l'encart">
+            <!-- Intégration twitter -->
+            <meta name="twitter:title" content="description de la page">
+            
+            <!-- links -->
+            <link rel="stylesheet" href="style/main.css" type="text/css" media="all">    
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+            <link rel="icon" href="favicon.png" />
+    </head>
+
+
+    <body>
+        <header>
+            <nav class="nav-fixed">
+                <a href="index.html" class="marque-et-logo">
+                    <div class="marque-et-logo__logo">
+                        <img src="img/logo.png" alt="logo Orinoco" >
+                    </div>  
+                    <p class="marque-et-logo__marque handwritten">Orinoco</p>
+                </a>
+                
+            </nav>
+        </header>
+
+        <main>
+            
+            <div id="hero"><h1 id="titre" class="slide-top">Votre panier </h1></div>
+            <div id="MainSection" class="fade-in">
+                <div id="orderInformation">
+                    <form action="orderConfirm.html">
+    
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                    
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Votre prenom" required>
+                    
+                        <label for="adresse">Adresse</label>
+                        <input type="text" id="adresse" name="adresse" placeholder="Votre adresse postale" required>
+                    
+                        <label for="ville">Ville</label>
+                        <input type="text" id="ville" name="ville" placeholder="Ville de résidence" required>
+
+                        <label for="codePostal">Code postal</label>
+                        <input type="text" pattern="\d{2}[ ]?\d{3}" id="codePostal" name="codePostal" placeholder="Code Postal" required>
+    
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre adresse email" required>
+                    
+                        <input type="submit" value="Passer la commande !" class="handwritten">
+                    
+                      </form>
+                </div>
+                <table id="panier" class="table ">
+                    <thead>
+                       <th> Nom </th>
+                        <th> Couleurs </th>
+                        <th> Quantité </th>
+                        <th> Prix </th> 
+                    </thead>
+                    <tfoot id="tfoot">
+                        <th>Total :</th>
+                        <th></th>
+                        <th id="totalQuantity"></th>
+                        <th id="totalPrice"> xxxx €</th>
+                        
+                    </tfoot>
+                    
+                    <tbody id="contenuPanier">
+
+                    </tbody>
+                </table>
+                <button id="orderPanier" class="fade-in" >Valider !</button>         
+            </div>   
+        </main>
+        
+        <script src="https://kit.fontawesome.com/f73e292c68.js" crossorigin="anonymous"></script>
+        <script src="script/script.js"></script>
+        <script src="script/script__panier.js"></script>
+    </body>
+</html>

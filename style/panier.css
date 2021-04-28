@@ -1,0 +1,72 @@
+.panier-color {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+}
+
+table {
+  background-color: #FFEBD0;
+  margin-bottom: 3rem;
+  border-radius: 2rem 0 2rem 0;
+  /* border: 1px solid black; */
+  border-collapse: collapse;
+  padding: 150px;
+}
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+table td {
+  /* border: 1px solid black; */
+  text-align: center;
+  min-width: 100px;
+  min-height: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#orderPanier {
+  align-self: center;
+  width: 200px;
+}
+
+.panier-select {
+  text-align: center;
+  font-size: 20px;
+  height: 30px;
+  width: 50px;
+  border: none;
+  outline: none;
+  background-color: #FFEBD0;
+}
+
+.soSad {
+  height: 125px;
+  width: 125px;
+  background-image: url("/img/sadB.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#add-confirm {
+  display: none;
+  position: absolute;
+  left: -100vw;
+  height: 100vh;
+  width: 100vw;
+  background-color: #9dbad5cb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+#add-confirm__message {
+  background-color: #FFEBD0;
+  border-radius: 2rem 0 2rem 0;
+  padding: 0 2rem;
+}
+#add-confirm__message p {
+  font-size: 30px;
+}/*# sourceMappingURL=panier.css.map */

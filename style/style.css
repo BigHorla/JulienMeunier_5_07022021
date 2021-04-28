@@ -1,0 +1,199 @@
+/* utilities */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.handwritten {
+  font-family: "Nanum Pen Script", cursive;
+}
+
+/* autre... */
+#panier-btn {
+  display: flex;
+  justify-content: center;
+  width: 12%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: 100%;
+  background-color: #B5E1EE;
+  align-self: flex-start;
+  transition-duration: 0.5s;
+}
+#panier-btn:hover {
+  background-color: #C8D6B9;
+}
+#panier-btn p {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 1rem;
+  align-self: baseline;
+}
+
+.marque-et-logo {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFEBD0;
+  transition-duration: 0.3s;
+}
+@media only screen and (max-width: 1280px) {
+  .marque-et-logo {
+    /* display: none; */
+    transform-origin: top left;
+    transform: rotate(90deg);
+    position: relative;
+    left: 5rem;
+  }
+}
+.marque-et-logo:hover {
+  background-color: #C8D6B9;
+}
+.marque-et-logo__marque {
+  font-size: 3rem;
+  margin: 0 2rem 0 1rem;
+}
+@media only screen and (max-width: 1280px) {
+  .marque-et-logo__marque {
+    /* display: none; */
+  }
+}
+.marque-et-logo__logo {
+  max-width: 20%;
+  max-height: 100%;
+  margin: 0 1rem 0 1rem;
+}
+.marque-et-logo__logo img {
+  height: 3rem;
+  width: 3rem;
+}
+
+/* MAIN CONTENT */
+#hero {
+  margin: 0 auto;
+}
+
+#magasin {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-between;
+  border-radius: 2rem;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 1.4rem;
+}
+@media only screen and (max-width: 800px) {
+  #magasin {
+    flex-flow: row wrap-reverse;
+  }
+}
+
+#MainSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 2rem;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 1.4rem;
+}
+
+.card {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  border: solid #B5E1EE;
+  background-color: #FFEBD0;
+  margin: 1rem;
+  max-width: 25%;
+  z-index: 0;
+  padding: 1.5rem;
+  border-radius: 2rem 0 2rem 0;
+  transition-duration: 1s;
+}
+@media only screen and (max-width: 1080px) {
+  .card {
+    max-width: 30%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .card {
+    max-width: 45%;
+  }
+}
+.card:hover {
+  border: solid #9DBAD5;
+  border-radius: 0 2rem 0 2rem;
+  transform: scale(1.2) rotate(-3deg);
+  opacity: 1;
+  z-index: 1;
+}
+.card:hover img {
+  transform: scale(1.3);
+}
+.card:hover .card__image {
+  border: solid #9DBAD5;
+  overflow: hidden;
+}
+.card__image {
+  overflow: hidden;
+  border-radius: 2rem 0 2rem 0;
+  border: solid #B5E1EE;
+  transition-duration: 1s;
+}
+.card img {
+  border-radius: 2rem 0 2rem 0;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 150px;
+  /* @media only screen and (max-width: 900px) {
+      max-width: 45%;
+      } */
+  transform: scale(1.1);
+  transition-duration: 1s;
+}
+@media only screen and (max-width: 1080px) {
+  .card img {
+    width: 200px;
+    height: 150px;
+  }
+}
+.card p {
+  font-size: large;
+  margin: 0;
+}
+
+#fiche-produit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  #fiche-produit {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+#fiche-produit__image {
+  height: 250px;
+  width: 250px;
+  margin: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #9DBAD5;
+  transition-delay: 1s;
+}
+#fiche-produit__prix {
+  font-size: x-large;
+  margin-top: 0;
+}/*# sourceMappingURL=style.css.map */

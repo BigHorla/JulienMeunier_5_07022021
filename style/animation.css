@@ -1,0 +1,114 @@
+/* Animation */
+@-webkit-keyframes slideLeft {
+  100% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
+@keyframes slideLeft {
+  100% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
+.slide-left {
+  position: relative;
+  transform: rotate(-180deg);
+  left: -700px;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: slideLeft 2s ease-out forwards;
+          animation: slideLeft 2s ease-out forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes slideTop {
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes slideTop {
+  100% {
+    top: 0;
+  }
+}
+.slide-top {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: -200px;
+  -webkit-animation: slideTop 2s ease-out forwards;
+          animation: slideTop 2s ease-out forwards;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fade-in 2s ease-out forwards;
+          animation: fade-in 2s ease-out forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.fade-in--fast {
+  opacity: 0;
+  -webkit-animation: fade-in 2s ease-out forwards;
+          animation: fade-in 2s ease-out forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes confirm {
+  0% {
+    left: -100vw;
+  }
+  25% {
+    left: 0vw;
+  }
+  75% {
+    left: 0vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+
+@keyframes confirm {
+  0% {
+    left: -100vw;
+  }
+  25% {
+    left: 0vw;
+  }
+  75% {
+    left: 0vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+.confirmAnimation {
+  -webkit-animation: confirm 2s linear 0s;
+          animation: confirm 2s linear 0s;
+}/*# sourceMappingURL=animation.css.map */

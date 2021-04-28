@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Template pour début de projet rapide -->
+<html lang="fr">
+    <head> 
+            <!-- Titre -->
+            <title>Template</title>
+            <!-- Meta standarts -->
+            <meta charset="UTF-8">
+            <meta name="author" content="Julien Meunier">
+            <meta name="description" content="Template pour débuter un porjet web">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+            <!-- Intégration facebook -->
+            <meta property="og:image" content="ImageReprésentative.png">
+            <meta property="og:description" content="description de la page">
+            <meta property="og:title" content="Titre de l'encart">
+            <!-- Intégration twitter -->
+            <meta name="twitter:title" content="description de la page">
+            
+            <!-- links -->
+            <link rel="stylesheet" href="style/main.css" type="text/css" media="all">    
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+            <link rel="icon" href="favicon.png" />
+    </head>
+        
+
+    <body class="center">
+        <h1>Confirmation de votre commande</h1>
+       <section id="confirmation">
+           <div>Identifiant de Commande :</div>
+           <div id="commandeId"></div>
+           <hr>
+           <div>Destinataire :</div>
+           <div class="adresseTotal">
+                <div id="nomPrenom"></div>
+                <div id="adressePostale"></div>
+                <div id="location"></div>
+           </div>
+           
+           <div id="emailAdresse"></div>
+           <hr>
+           <div id="totalPriceOrder">TOTAL</div>
+       </section>
+       <a onclick="deletePanier()" href="index.html" class="small-btn">Retour à la boutique</a>
+        <script src="https://kit.fontawesome.com/f73e292c68.js" crossorigin="anonymous"></script>
+        <script src="script/script.js"></script>
+        <script src="script/script__post.js"></script>
+    </body>
+</html>
