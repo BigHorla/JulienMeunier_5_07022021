@@ -1,0 +1,47 @@
+/* Animation */
+@keyframes slideLeft {
+    100% { left: 0; transform: rotate(0deg); opacity: 1; }
+}
+.slide-left{
+    position: relative;
+    transform:rotate(-180deg);
+    left: -100vw;    
+    animation: slideLeft 2s ease-out forwards;
+    animation-delay: 0s;
+}
+@keyframes slideTop {
+    100% { top: 0;}
+}
+.slide-top{
+    position: relative;
+    width: fit-content;
+    top: -20rem;
+    animation: slideTop 2s ease-out forwards;
+    animation-delay: 0s;
+}
+@keyframes fade-in {
+    0% {opacity: 0}
+    100% {opacity: 1 }
+}
+.fade-in{
+    opacity: 0;
+    animation: fade-in 2s ease-out forwards;
+    animation-delay: 2s;
+}
+.fade-in--fast{
+    opacity: 0;
+    animation: fade-in 2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+@keyframes confirm {
+    0% { left: -100vw }
+    25% { left: 0vw }
+    75% { left: 0vw }
+    100% { left: 100vw;}
+}
+.confirmAnimation{
+    animation: confirm 2s linear 0s;
+}
+
+
+

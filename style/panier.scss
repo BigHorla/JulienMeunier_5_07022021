@@ -1,0 +1,72 @@
+@import "variables";
+
+
+.panier-color{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+table{
+
+    width: fit-content;
+    background-color: $tertiary-color;
+    margin-bottom: 3rem;
+    border-radius: 2rem 0 2rem 0;
+    border-collapse: collapse;
+    padding: 15rem;
+    th{
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+    td{
+        text-align: center;
+        min-width: 10rem;
+        min-height: 8rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+#orderPanier{
+    align-self: center;
+    width: 20rem;
+}
+.panier-select{
+    text-align: center;
+    font-size: 2rem;
+    height: 3rem;
+    width: 5rem;
+    border: none;
+    outline: none;
+    background-color: $tertiary-color;
+}
+
+.soSad{
+    height: 12.5rem;
+    width: 12.5rem;
+    background-image: url('/img/sadB.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#add-confirm{
+    display: none;
+    position: fixed;
+    left : -100vw;
+    height: 100vh;
+    width: 100vw;
+    background-color: #9dbad5cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+    &__message{
+        background-color: $tertiary-color;
+        border-radius: 2rem 0 2rem 0;
+        padding: 0 2rem;
+        p{
+            font-size: 3rem;
+        }      
+    }
+}

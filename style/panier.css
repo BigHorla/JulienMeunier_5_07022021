@@ -1,50 +1,50 @@
 .panier-color {
-  height: 20px;
-  width: 20px;
+  height: 2rem;
+  width: 2rem;
   border-radius: 50%;
-  /* border: 1px solid black; */
   margin: 0 auto;
 }
 
 table {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: #FFEBD0;
   margin-bottom: 3rem;
   border-radius: 2rem 0 2rem 0;
-  /* border: 1px solid black; */
   border-collapse: collapse;
-  padding: 150px;
+  padding: 15rem;
 }
 table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
 }
 table td {
-  /* border: 1px solid black; */
   text-align: center;
-  min-width: 100px;
-  min-height: 80px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  min-width: 10rem;
+  min-height: 8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #orderPanier {
   align-self: center;
-  width: 200px;
+  width: 20rem;
 }
 
 .panier-select {
   text-align: center;
-  font-size: 20px;
-  height: 30px;
-  width: 50px;
+  font-size: 2rem;
+  height: 3rem;
+  width: 5rem;
   border: none;
   outline: none;
   background-color: #FFEBD0;
 }
 
 .soSad {
-  height: 125px;
-  width: 125px;
+  height: 12.5rem;
+  width: 12.5rem;
   background-image: url("/img/sadB.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -52,7 +52,7 @@ table td {
 
 #add-confirm {
   display: none;
-  position: absolute;
+  position: fixed;
   left: -100vw;
   height: 100vh;
   width: 100vw;
@@ -68,5 +68,5 @@ table td {
   padding: 0 2rem;
 }
 #add-confirm__message p {
-  font-size: 30px;
+  font-size: 3rem;
 }/*# sourceMappingURL=panier.css.map */

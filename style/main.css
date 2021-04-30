@@ -1,58 +1,58 @@
 .panier-color {
-  height: 20px;
-  width: 20px;
+  height: 2rem;
+  width: 2rem;
   border-radius: 50%;
-  /* border: 1px solid black; */
   margin: 0 auto;
 }
 
 table {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: #FFEBD0;
   margin-bottom: 3rem;
   border-radius: 2rem 0 2rem 0;
-  /* border: 1px solid black; */
   border-collapse: collapse;
-  padding: 150px;
+  padding: 15rem;
 }
 table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
 }
 table td {
-  /* border: 1px solid black; */
   text-align: center;
-  min-width: 100px;
-  min-height: 80px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  min-width: 10rem;
+  min-height: 8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #orderPanier {
   align-self: center;
-  width: 200px;
+  width: 20rem;
 }
 
 .panier-select {
   text-align: center;
-  font-size: 20px;
-  height: 30px;
-  width: 50px;
+  font-size: 2rem;
+  height: 3rem;
+  width: 5rem;
   border: none;
   outline: none;
   background-color: #FFEBD0;
 }
 
 .soSad {
-  height: 125px;
-  width: 125px;
-  background-image: url("../img/sadB.png");
+  height: 12.5rem;
+  width: 12.5rem;
+  background-image: url("/img/sadB.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #add-confirm {
   display: none;
-  position: absolute;
+  position: fixed;
   left: -100vw;
   height: 100vh;
   width: 100vw;
@@ -68,7 +68,7 @@ table td {
   padding: 0 2rem;
 }
 #add-confirm__message p {
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 /* utilities */
@@ -93,6 +93,11 @@ table td {
   align-self: flex-start;
   transition-duration: 0.5s;
 }
+@media only screen and (max-width: 430px) {
+  #panier-btn {
+    border: solid 0.1rem #FFEBD0;
+  }
+}
 #panier-btn:hover {
   background-color: #C8D6B9;
 }
@@ -113,11 +118,19 @@ table td {
 }
 @media only screen and (max-width: 1280px) {
   .marque-et-logo {
-    /* display: none; */
     transform-origin: top left;
     transform: rotate(90deg);
     position: relative;
     left: 5rem;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .marque-et-logo {
+    transform-origin: top left;
+    transform: rotate(0deg);
+    position: relative;
+    left: 0rem;
+    border: solid 0.1rem #9DBAD5;
   }
 }
 .marque-et-logo:hover {
@@ -127,9 +140,9 @@ table td {
   font-size: 3rem;
   margin: 0 2rem 0 1rem;
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 430px) {
   .marque-et-logo__marque {
-    /* display: none; */
+    display: none;
   }
 }
 .marque-et-logo__logo {
@@ -161,6 +174,17 @@ table td {
 @media only screen and (max-width: 800px) {
   #magasin {
     flex-flow: row wrap-reverse;
+  }
+}
+#magasin--product {
+  margin: 0 auto;
+  max-width: 80%;
+}
+@media only screen and (max-width: 600px) {
+  #magasin--product {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -199,6 +223,13 @@ table td {
     max-width: 45%;
   }
 }
+@media only screen and (max-width: 430px) {
+  .card {
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+}
 .card:hover {
   border: solid #9DBAD5;
   border-radius: 0 2rem 0 2rem;
@@ -226,17 +257,14 @@ table td {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 150px;
-  /* @media only screen and (max-width: 900px) {
-      max-width: 45%;
-      } */
+  height: 15rem;
   transform: scale(1.1);
   transition-duration: 1s;
 }
 @media only screen and (max-width: 1080px) {
   .card img {
-    width: 200px;
-    height: 150px;
+    width: 95%;
+    height: 15rem;
   }
 }
 .card p {
@@ -249,24 +277,24 @@ table td {
   100% {
     left: 0;
     transform: rotate(0deg);
+    opacity: 1;
   }
 }
 @keyframes slideLeft {
   100% {
     left: 0;
     transform: rotate(0deg);
+    opacity: 1;
   }
 }
 .slide-left {
   position: relative;
   transform: rotate(-180deg);
-  left: -700px;
-  width: 100px;
-  height: 100px;
+  left: -100vw;
   -webkit-animation: slideLeft 2s ease-out forwards;
           animation: slideLeft 2s ease-out forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 @-webkit-keyframes slideTop {
@@ -285,7 +313,7 @@ table td {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  top: -200px;
+  top: -20rem;
   -webkit-animation: slideTop 2s ease-out forwards;
           animation: slideTop 2s ease-out forwards;
   -webkit-animation-delay: 0s;
@@ -372,13 +400,13 @@ table td {
   }
 }
 #fiche-produit__image {
-  height: 250px;
-  width: 250px;
+  height: 25rem;
+  width: 25rem;
   margin: 2rem;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #9DBAD5;
+  border: 0.4rem solid #9DBAD5;
   transition-delay: 1s;
 }
 #fiche-produit__prix {
@@ -396,9 +424,9 @@ table td {
 }
 #colors-section .colorViewer {
   margin-right: 2rem;
-  height: 50px;
-  width: 50px;
-  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  border: 0.3rem solid white;
   border-radius: 50%;
   transition-duration: 1.5s;
 }
@@ -411,6 +439,26 @@ table td {
   flex-flow: row nowrap;
   justify-content: space-between;
   width: 90%;
+}
+@media only screen and (max-width: 800px) {
+  .orderBox {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .orderBox {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  button #order {
+    font-size: 2rem;
+  }
 }
 
 #selectQuantity {
@@ -427,16 +475,17 @@ table td {
   transition-duration: 1s;
   overflow: hidden;
   font-family: "Quicksand", sans-serif;
-  border: 1px solid #66C3CA;
+  border: 0.1rem solid #66C3CA;
   border-radius: 2rem 0 2rem 0;
+  margin: 1rem 0;
 }
 #selectQuantity__minus {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  height: 50px;
-  width: 50px;
+  font-size: 1.4rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 2rem 0 0 0;
   background-color: #FFEBD0;
 }
@@ -447,18 +496,18 @@ table td {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
-  height: 50px;
-  width: 100px;
+  font-size: 2rem;
+  height: 5rem;
+  width: 10rem;
   background-color: #FFEBD0;
 }
 #selectQuantity__plus {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  height: 50px;
-  width: 50px;
+  font-size: 1.4rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 0 0 2rem 0;
   background-color: #FFEBD0;
 }
@@ -468,7 +517,7 @@ table td {
 
 #orderInformation {
   display: none;
-  max-width: 500px;
+  max-width: 50rem;
 }
 
 form {
@@ -481,17 +530,17 @@ form {
 input[type=text], input[type=email], select, textarea {
   width: 100%;
   /* Full width */
-  padding: 12px;
+  padding: 1.2rem;
   /* Some padding */
-  border: 1px solid #ccc;
+  border: 0.1rem solid #ccc;
   /* Gray border */
-  border-radius: 4px;
+  border-radius: 0.4rem;
   /* Rounded borders */
   box-sizing: border-box;
   /* Make sure that padding and width stays in place */
-  margin-top: 6px;
+  margin-top: 0.6rem;
   /* Add a top margin */
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
   /* Bottom margin */
   resize: vertical;
 }
@@ -505,13 +554,13 @@ input[type=submit] {
   background-color: #FFEBD0;
   border: none;
   border-radius: 2rem 0 2rem 0;
-  padding: 15px 32px;
+  padding: 1.5rem 3.2rem;
   text-align: center;
   font-size: 2rem;
   transition-duration: 1s;
   transform: scale(1);
   outline: none;
-  border: 1px solid #66C3CA;
+  border: 0.1rem solid #66C3CA;
 }
 input[type=submit]:hover {
   border-radius: 0 2rem 0 2rem;
@@ -521,9 +570,9 @@ input[type=submit]:hover {
 
 /* Add a background color and some padding around the form */
 .container {
-  border-radius: 5px;
+  border-radius: 0.5rem;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 2rem;
 }
 
 html {
@@ -535,7 +584,7 @@ html body {
   padding: 0;
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
-  background-image: url("../img/background.jpg");
+  background-image: url("/img/background.jpg");
   background-position: center;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -595,6 +644,12 @@ a {
     margin: 0;
   }
 }
+@media only screen and (max-width: 430px) {
+  #titre {
+    margin-top: 4rem;
+  }
+}
+
 /*---Interface-----------------------*/
 button {
   display: inline-block;
@@ -603,13 +658,13 @@ button {
   background-color: #FFEBD0;
   border: none;
   border-radius: 2rem 0 2rem 0;
-  padding: 15px 32px;
+  padding: 1.5rem 3.2rem;
   text-align: center;
   font-size: 2rem;
   transition-duration: 1s;
   transform: scale(1);
   outline: none;
-  border: 1px solid #66C3CA;
+  border: 0.1rem solid #66C3CA;
 }
 button:hover {
   border-radius: 0 2rem 0 2rem;
@@ -664,13 +719,13 @@ button:hover {
   background-color: #FFEBD0;
   border: none;
   border-radius: 2rem 0 2rem 0;
-  padding: 15px 32px;
+  padding: 1.5rem 3.2rem;
   text-align: center;
   font-size: 2rem;
   transition-duration: 1s;
   transform: scale(1);
   outline: none;
-  border: 1px solid #66C3CA;
+  border: 0.1rem solid #66C3CA;
 }
 .small-btn:hover {
   border-radius: 0 2rem 0 2rem;

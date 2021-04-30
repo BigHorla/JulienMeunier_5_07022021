@@ -1,0 +1,159 @@
+@import "panier";
+@import "variables";
+@import "style";
+@import "animation";
+@import "product_page";
+@import "form";
+
+html {
+    font-size: 62.5%; /*1.0rem = 10px */
+    body{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        font-family: "Quicksand", sans-serif;
+        background-image: url("/img/background.jpg");
+        background-position: center;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        
+        header{   
+            
+            background-color: $primary-color;
+            
+            nav{
+                height: 5rem;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        main{
+
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+        footer{
+            background-color: $secondary-color;
+            padding: 1.5rem;
+        }
+    }
+}
+/*---Text-elements-----------------------*/
+h1{
+    font-size: 4.2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+h2{
+    font-size: 3.0rem;
+    margin: 0;
+}
+p{
+    font-size: 1.4rem;
+}
+a{
+    text-decoration: none;
+    color: #1E1E1E;
+} 
+@media only screen and (max-width: 800px) {
+    h1{
+        font-size: 2.2rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    h2{
+        font-size: 3.0rem;
+        margin: 0;
+    }
+}
+#titre{
+    @media only screen and (max-width: 430px) {
+        margin-top: 4rem;
+    }
+}
+/*---Interface-----------------------*/
+button{
+    display: inline-block;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    background-color: $tertiary-color;
+    border: none;
+    border-radius: 2rem 0 2rem 0;
+    padding: 1.5rem 3.2rem;
+    text-align: center;
+    font-size: 2rem;
+    transition-duration: 1s;
+    transform : scale(1);
+    outline: none;
+    border: 0.1rem solid #66C3CA;
+    &:hover{
+        border-radius: 0 2rem 0 2rem;
+        transform: scale(1.2) rotate(-3deg);
+        cursor: pointer;
+    }
+}
+/*---CLASS-----------------------*/
+.footer-fixed{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.nav-fixed{
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+#confirmation{
+    font-size: 2rem;
+    padding: 2rem;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    border-radius: 2rem 0 2rem 0;
+    background-color: rgba(255, 255, 255, 0.685);
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.small-btn{
+    margin-top: 3rem;
+    width: fit-content;
+    display: inline-block;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    background-color: $tertiary-color;
+    border: none;
+    border-radius: 2rem 0 2rem 0;
+    padding: 1.5rem 3.2rem;
+    text-align: center;
+    font-size: 2rem;
+    transition-duration: 1s;
+    transform : scale(1);
+    outline: none;
+    border: .1rem solid #66C3CA;
+    &:hover{
+        border-radius: 0 2rem 0 2rem;
+        transform: scale(1.2) rotate(-3deg);
+        cursor: pointer;
+    }
+}
+#totalPriceOrder{
+   text-align: right;
+}
+#commandeId{
+    font-size: small;
+}
+.adresseTotal{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

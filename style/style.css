@@ -20,6 +20,11 @@
   align-self: flex-start;
   transition-duration: 0.5s;
 }
+@media only screen and (max-width: 430px) {
+  #panier-btn {
+    border: solid 0.1rem #FFEBD0;
+  }
+}
 #panier-btn:hover {
   background-color: #C8D6B9;
 }
@@ -40,11 +45,19 @@
 }
 @media only screen and (max-width: 1280px) {
   .marque-et-logo {
-    /* display: none; */
     transform-origin: top left;
     transform: rotate(90deg);
     position: relative;
     left: 5rem;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .marque-et-logo {
+    transform-origin: top left;
+    transform: rotate(0deg);
+    position: relative;
+    left: 0rem;
+    border: solid 0.1rem #9DBAD5;
   }
 }
 .marque-et-logo:hover {
@@ -54,9 +67,9 @@
   font-size: 3rem;
   margin: 0 2rem 0 1rem;
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 430px) {
   .marque-et-logo__marque {
-    /* display: none; */
+    display: none;
   }
 }
 .marque-et-logo__logo {
@@ -88,6 +101,17 @@
 @media only screen and (max-width: 800px) {
   #magasin {
     flex-flow: row wrap-reverse;
+  }
+}
+#magasin--product {
+  margin: 0 auto;
+  max-width: 80%;
+}
+@media only screen and (max-width: 600px) {
+  #magasin--product {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -126,6 +150,13 @@
     max-width: 45%;
   }
 }
+@media only screen and (max-width: 430px) {
+  .card {
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+}
 .card:hover {
   border: solid #9DBAD5;
   border-radius: 0 2rem 0 2rem;
@@ -153,17 +184,14 @@
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 150px;
-  /* @media only screen and (max-width: 900px) {
-      max-width: 45%;
-      } */
+  height: 15rem;
   transform: scale(1.1);
   transition-duration: 1s;
 }
 @media only screen and (max-width: 1080px) {
   .card img {
-    width: 200px;
-    height: 150px;
+    width: 95%;
+    height: 15rem;
   }
 }
 .card p {

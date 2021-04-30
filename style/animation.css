@@ -3,24 +3,24 @@
   100% {
     left: 0;
     transform: rotate(0deg);
+    opacity: 1;
   }
 }
 @keyframes slideLeft {
   100% {
     left: 0;
     transform: rotate(0deg);
+    opacity: 1;
   }
 }
 .slide-left {
   position: relative;
   transform: rotate(-180deg);
-  left: -700px;
-  width: 100px;
-  height: 100px;
+  left: -100vw;
   -webkit-animation: slideLeft 2s ease-out forwards;
           animation: slideLeft 2s ease-out forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 @-webkit-keyframes slideTop {
@@ -39,7 +39,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  top: -200px;
+  top: -20rem;
   -webkit-animation: slideTop 2s ease-out forwards;
           animation: slideTop 2s ease-out forwards;
   -webkit-animation-delay: 0s;

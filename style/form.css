@@ -1,6 +1,6 @@
 #orderInformation {
   display: none;
-  max-width: 500px;
+  max-width: 50rem;
 }
 
 form {
@@ -13,17 +13,17 @@ form {
 input[type=text], input[type=email], select, textarea {
   width: 100%;
   /* Full width */
-  padding: 12px;
+  padding: 1.2rem;
   /* Some padding */
-  border: 1px solid #ccc;
+  border: 0.1rem solid #ccc;
   /* Gray border */
-  border-radius: 4px;
+  border-radius: 0.4rem;
   /* Rounded borders */
   box-sizing: border-box;
   /* Make sure that padding and width stays in place */
-  margin-top: 6px;
+  margin-top: 0.6rem;
   /* Add a top margin */
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
   /* Bottom margin */
   resize: vertical;
 }
@@ -37,13 +37,13 @@ input[type=submit] {
   background-color: #FFEBD0;
   border: none;
   border-radius: 2rem 0 2rem 0;
-  padding: 15px 32px;
+  padding: 1.5rem 3.2rem;
   text-align: center;
   font-size: 2rem;
   transition-duration: 1s;
   transform: scale(1);
   outline: none;
-  border: 1px solid #66C3CA;
+  border: 0.1rem solid #66C3CA;
 }
 input[type=submit]:hover {
   border-radius: 0 2rem 0 2rem;
@@ -53,7 +53,7 @@ input[type=submit]:hover {
 
 /* Add a background color and some padding around the form */
 .container {
-  border-radius: 5px;
+  border-radius: 0.5rem;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 2rem;
 }/*# sourceMappingURL=form.css.map */

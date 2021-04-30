@@ -1,0 +1,118 @@
+@import "variables";
+
+#fiche-produit{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 767px) {
+        flex-direction: column;
+        text-align: center;
+    }
+    &__image{    
+        height: 25rem;
+        width: 25rem;
+        margin: 2rem;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 0.4rem solid $primary-color;
+        transition-delay: 1s;
+    }
+    &__prix{
+        font-size: x-large;
+        margin-top: 0;
+    }
+}
+#colors-section{
+    display: flex;
+    @media only screen and (max-width: 767px) {
+        justify-content: center ;
+        
+    }
+    
+    .colorViewer{
+        margin-right: 2rem;
+        height: 5rem;
+        width: 5rem;
+        border: .3rem solid white;
+        border-radius: 50%;
+        transition-duration: 1.5s;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+.orderBox{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 90%;
+    @media only screen and (max-width: 800px) {
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    @media only screen and (max-width: 600px) {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+
+@mixin displayCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+button #order{
+    @media only screen and (max-width: 600px) {
+        font-size: 2rem;        
+    }
+}
+
+#selectQuantity{
+    @include displayCenter;
+    width: fit-content;
+    height: fit-content;
+    flex-direction: row;
+    transition-duration: 1s;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    border: .1rem solid #66C3CA;
+    border-radius: 2rem 0 2rem 0;
+    margin: 1rem 0;
+    
+    
+    &__minus{
+        @include displayCenter;
+        font-size: 1.4rem;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 2rem 0 0 0;
+        background-color: $tertiary-color;
+        &:hover{
+            background-color: $primary-color;
+        }
+    }
+    &__quantity{
+        @include displayCenter;
+        font-size: 2rem;
+        height: 5rem;
+        width: 10rem;
+        background-color: $tertiary-color;
+    }
+    &__plus{
+        @include displayCenter;
+        font-size: 1.4rem;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 0 0 2rem 0;
+        background-color: $tertiary-color;
+        &:hover{
+            background-color: $primary-color;
+        }
+    }
+}
