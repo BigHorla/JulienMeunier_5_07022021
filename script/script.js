@@ -20,12 +20,7 @@ const miseEnRayon = (boutique) =>{
       newArticle = document.createElement("a");
       newArticle.classList.add("card");
       //----------------------------------------------------------------------------Config des infos dans l'url
-      newArticle.setAttribute("href", "product.html?colors="+element.colors
-      +"&description="+element.description
-      +"&imageUrl="+element.imageUrl
-      +"&name="+element.name+"&price="
-      +element.price+"&_id="
-      +element._id);
+      newArticle.setAttribute("href", "product.html?colors="+"&_id="+element._id);
       //----------------------------------------------------------------------------Creation du conteneur de l'image
       imageArticleContainer = document.createElement("div");
       imageArticleContainer.classList.add("card__image");
@@ -173,6 +168,7 @@ const setNewQuantity = (article, newQuantity) => {
 }
 //affiche les infos du produit selectioné sur la page
 const displayProductInfo = (product) =>{
+  
   const titre = document.getElementById("titre");
   const image = document.getElementById("fiche-produit__image");
   const nom = document.getElementById("fiche-produit__nom");
@@ -180,18 +176,17 @@ const displayProductInfo = (product) =>{
   const description = document.getElementById("fiche-produit__description");
   const button = document.getElementById("order");
 
-  titre.textContent = "En savoir plus sur "+new URL(window.location.href).searchParams.get("name");
-  nom.textContent = new URL(window.location.href).searchParams.get("name");
-  prix.textContent = numStr(new URL(window.location.href).searchParams.get("price"));
-  description.textContent = new URL(window.location.href).searchParams.get("description");
-  image.setAttribute('src', new URL(window.location.href).searchParams.get("imageUrl"));
-  button.textContent = "Adopter "+new URL(window.location.href).searchParams.get("name");       
+  titre.textContent = "En savoir plus sur "+product.name;
+  nom.textContent = product.name;
+  prix.textContent = numStr(product.price);
+  description.textContent = product.description;
+  image.setAttribute('src', product.imageUrl);
+  button.textContent = "Adopter "+product.name;       
 }
 //affiche le choix de couleurs en fonction du retour de l'API
-const getColors = () =>{
-  const colorSection = document.getElementById("colors-section")
-  const colorsData = new URL(window.location.href).searchParams.get("colors");
-  colors = colorsData.split(',');
+const getColors = (colors) =>{
+  console.log(colors);
+  const colorSection = document.getElementById("colors-section");
   for(let element in colors){
       newColor = document.createElement("div");
       newColor.classList.add("colorViewer");
@@ -269,13 +264,13 @@ const chooseColor = (color) =>{
 //Créer un lot contenant les articles identiques
 const createBatch = () =>{
   let newBatch = {
-      name : new URL(window.location.href).searchParams.get("name"),
+      name : product.name,
       color : colorChoice,
       quantity : parseInt(document.getElementById("selectQuantity__quantity").textContent, 10),
-      price : parseInt(new URL(window.location.href).searchParams.get("price"), 10),
-      totalPrice : parseInt(document.getElementById("selectQuantity__quantity").textContent, 10)*parseInt(new URL(window.location.href).searchParams.get("price"), 10),
-      image : new URL(window.location.href).searchParams.get("imageUrl"),
-      _id : new URL(window.location.href).searchParams.get("_id")
+      price : parseInt(product.price, 10),
+      totalPrice : parseInt(document.getElementById("selectQuantity__quantity").textContent, 10)*product.price,
+      image : product.imageUrl,
+      _id : product._id,
   }
   return(newBatch);
 }
@@ -290,17 +285,17 @@ const animationConfirmation = async() =>{
   }, 5000);
 }
 //Permet l'ajout d'article au panier
-const ajouterAuPanier = () =>{
+const ajouterAuPanier = (product) =>{
   if(colorChoice === "" && document.getElementById("selectQuantity__quantity").textContent === "0"){
-      alert("Choisissez une couleur et une quantité pour "+new URL(window.location.href).searchParams.get("name")+" !")
+      alert("Choisissez une couleur et une quantité pour "+document.getElementById("titre").textContent+" !")
   }else if(colorChoice != "" && document.getElementById("selectQuantity__quantity").textContent === "0"){
-      alert("Choisissez une quantité pour "+new URL(window.location.href).searchParams.get("name")+" !")
+      alert("Choisissez une quantité pour "+document.getElementById("titre").textContent+" !")
   }else if(colorChoice === "" && document.getElementById("selectQuantity__quantity").textContent != "0"){
-      alert("Choisissez une couleur pour "+new URL(window.location.href).searchParams.get("name")+" !")
+      alert("Choisissez une couleur pour "+document.getElementById("titre").textContent+" !")
   }else{
               
       let panier = getPanier();
-      let newBatch = createBatch();
+      let newBatch = createBatch(product);
       animationConfirmation();
 
       if(panier === null || panier === []){    

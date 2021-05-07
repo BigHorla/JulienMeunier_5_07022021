@@ -1,5 +1,6 @@
 const boutique = document.getElementById("magasin");
 let catalogue = new Array();
+
 //Pour les navigateur avec fetch
 if (window.fetch) {
   fetch("http://localhost:3000/api/teddies")
