@@ -33,8 +33,9 @@ if (window.fetch) {
       console.log(
         "Catalogue chargé, " + catalogue.length + " article(s) trouvé(s) :"
       );
-      console.log(catalogue);
-      miseEnRayon(boutique);
+      product = response;
+      displayProductInfo(product);
+      getColors(product.colors);
     }
   };
   request.open("GET", "http://localhost:3000/api/teddies/"+product_id);
